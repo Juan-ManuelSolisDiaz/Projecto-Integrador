@@ -3,13 +3,13 @@ body{
     background: black;
 }
 .header{
-    height: 50vh;
+    height: 40vh;
     width: 100%;
-    background-image: url(gif.gif);
+    background-image: url(imagenes/gif.gif);
     background-repeat: no-repeat;
     background-position:center;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-family: 'Rowdies', cursive;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     
 }
 .logo{
@@ -23,6 +23,7 @@ body{
     transition-duration: 1s;
 }
 .titulito{
+    font-size: 40px;
     color: #fff;
     display: inline;
     position:absolute;
@@ -43,19 +44,21 @@ header label {
     height: 30px;
     padding: 10px;
     border-left: 1px solid #fff;
-    
+    s
 }
 header label:hover{
     cursor: pointer;
     background: rgba(0,0,0,0.3);
 }
+
 .lista{
+    box-sizing: content-box;
+    font-size: 30px;
     margin: 0;
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    padding: 30px;
 }
 a{
     display: block;
@@ -72,7 +75,8 @@ a{
     transform: scale(1.3);
     transition-duration: 0.5s;
 }
-@media (max-width:768px){
+
+@media screen and (max-width: 900px) {
    header label {
        display: block;
        float: right;
@@ -90,7 +94,7 @@ a{
        flex-direction: column;
    }
    .menu li{
-       border-top: 1px solid #fff;
+       border-bottom: 1px solid #fff;
        
    }
    #paty-menu:checked ~ .menu{
@@ -114,7 +118,7 @@ a{
 
 .carusel{
     margin:0;
-    background-image: url(bannergif.gif);
+    background-image: url(imagenes/bannergif.gif);
     background-attachment: fixed;
     background-repeat:no-repeat;
     background-position:center;
@@ -125,17 +129,18 @@ a{
 
 .titulo{
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-family: 'Rowdies', cursive;
-    font-size: 35px;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4.0625rem;
     text-align: center;
-    color: black;
+    color: #0c0c0c;
     padding-top: 10px;
+    position: static;
 }
 
 .slider{
     margin:auto;
-    width: 85%;
+    width: 90%;
     overflow: hidden;
 }
 
@@ -145,17 +150,18 @@ a{
     padding: 0;
     width: 400%;
     animation-name: cambio;
-    animation-duration: 10s;
+    animation-duration: 14s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 .slider li{
-    width: 70%;
+    height: 100vh;
+    width: 100%;
     list-style: none;
 }
 .slider img{
     width: 100%;
-    height: 90vh;
+    height: 100%;
 }
 
 
@@ -173,12 +179,13 @@ a{
     100% {margin-left: -300%;}
 }
 
-@media (max-width:768px){
+@media screen and (max-width: 900px){
     .carusel{
         height: 90vh;
     }
     .titulo{
-        text-align: left;
+        text-align: center;
+        
     }
     .slider{
         width: 90%;
@@ -195,98 +202,184 @@ a{
 
 .padrecontenedor {
     width: 100%;
-    height: 200vh;
+    height: 180vh;
     display: flex;
-    justify-content: center;
-    background:black ;
+    justify-content: space-around;
+    background: black;
+
 }
 .contenedor{
+    width: 100%;
     margin:0 ;
-    padding:20px ;
+    padding:30px ;
     display: grid;
-    grid-template-columns:repeat(4, 1fr) ; 
-    grid-template-rows:repeat(6, 2fr);
+    grid-gap: 25px;
+    grid-template-columns:repeat(4, 2fr) ; 
+    grid-template-rows:repeat(5, 2fr);
     grid-template-areas:"caja1 caja1 caja2 caja2"
                         "caja1 caja1 caja2 caja2"
-                        "caja3 caja3 caja3 aside"
-                        "caja3 caja3 caja3 aside"
-                        "caja4 caja4 caja4 aside"
-                        "caja4 caja4 caja4 aside";
+                        "caja3 caja3 aside aside"
+                        "caja3 caja3 aside aside"
+                        "caja4 caja4 caja4 caja4";
 }
 .contenedor div{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    background: #fff;
-    padding: 20px;
+    padding: 0;
     border-radius: 5px;
-    color: black;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    color: #fff;
+    background: whitesmoke;
+}
+.contenedor div:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition-duration: 0.5s;
 }
 .contenedor .caja1{
     grid-area: caja1;
+    background-image:url(imagenes/fondocarusel.jpg);
+    background-attachment:scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
 }
+
+
 .contenedor .caja2{
     grid-area: caja2;
+    background-image: url(imagenes/banner3.gif);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 .contenedor .caja3{
     grid-area: caja3;
+    background-image: url(imagenes/indumentaria.jpg);
+    background-attachment:scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
 }
 .contenedor .caja4{
    grid-area: caja4;
+   background: black;
+   background-image: url(imagenes/cabecerra.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: contain;
+   background-position-x: center;
+}
+.tickets{
+    box-sizing: content-box;
+    height:100px;
+    width: 70vw;
 }
 
-.contenedor aside{
-    display: ;
-    align-items: flex-start;
-    justify-content:;
-    margin: 10px;
-    background-color: darkgray;
-    padding: 20px;
-    border-radius: 10px;
+.sidebar{
+    display: block;
+    margin: 0;
+    background: #111;      
+    border-radius: 5px;
     grid-area: aside;
+    color: #ccc;
 }
-.titulodelista{
-    text-align:center;
-    font-size: 20px;
-    margin: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-family: 'Rowdies', cursive;
+.sidebar h2{
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Bebas Neue', cursive;
 }
-.reproduccion{
-  
+.spot{
+    box-sizing: content-box;
+    height:60vh ;
+    width: 100%;
+}
+.spotifi{
+    width: 100%;
+    height: 330px;
 
 }
-@media (max-width:850px){
-    .contenedorpadre{
-        height: 150vh;
+
+@media screen and (max-width: 900px) {
+    .padrecontenedor{
     }
     .contenedor{
-        width;
-        background: #434343;
-        grid-template-columns:repeat(4, 1fr) ; 
-        grid-template-rows:repeat(5, 1fr);
-        grid-template-areas: "caja1 caja1 caja1 caja1"
-                             "caja2 caja2 caja2 caja2"
-                             "caja3 caja3 caja3 caja3"
-                             "caja4 caja4 aside aside"
-                             "caja4 caja4 aside aside";
+        grid-gap: 15px;
+        grid-template-columns:repeat(3, 2fr) ; 
+        grid-template-rows:repeat(5, 2fr);
+        grid-template-areas: "caja1 caja1 caja1"
+                             "caja2 caja2 caja2"
+                             "caja3 caja3 caja3"
+                             "aside aside aside"
+                             "aside aside aside"
+                             "caja4 caja4 caja4";
     }
     .contenedor div{
-        margin: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 10px;
         background: #fff;
         padding: 20px;
         border-radius: 5px;
-        color: black;
+    }
+    .spot{
+        height:60vh ;
+        width: 100%;
+    }
+    .spotifi{
+        height: 290px;
+    
     }
 
 }
 
+/*--------GPS MAPA----------*/
+.gps{
+    height: 80vh;
+    width: 100%;
+    background-image: url(imagenes/river.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.mapa{
+    height: 70%;
+    width: 70%;
+}
+.mapa:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+@media screen and (max-width: 900px){
+    .gps{
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mapa{
+        height: 70%;
+        width: 70%;
+    }
+
+}
 
 
 
@@ -303,10 +396,132 @@ a{
 /*FOOTER*/ 
 
 .pie{
-    height: 30vh;
-    width:100%;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    bottom: 0px;
+    height: 70vh;
+    width: 100%;
+    background: #111;
 }
 
+.boxpadre{
+    display: flex;
+}
+    
+.boxpadre .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+    color: #ccc;
+}
+.box h3{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .contenido{
+    margin: 20px 0 0 0;
+    position: relative;
+  }
+  .box .contenido:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  .box .contenido:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #f12020;
+    top: -10px;
+  }
+  .left .contenido p{
+    text-align: justify;
+    font-family: 'Alata', sans-serif;
+  }
+  .center .contenido{
+      list-style: none;
+      display:block;
+  }
+  .center .contenido .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+  }
+  .contenido .redes{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+  }
+  .contenido .redes:hover{
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+  }
+
+  .right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+  }
+  .right form input {
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+  }
+  .msg .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+  }
+  .msg textarea{
+      resize: none;
+      width: 100%;
+      font-size: 1.0625rem;
+      background: #151515;
+      padding-left: 10px;
+      border: 1px solid #222222;
+  }
+  
+
+  .btn button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #f12020;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    color: #ccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .btn button:hover{
+    background: #000;
+  }
+
+
+
+
+@media screen and (max-width: 900px) {
+        .pie{
+          height: 160vh;
+          bottom: 0px;
+        }
+        .boxpadre{
+          flex-wrap:wrap;
+          flex-direction: column;
+        }
+        .boxpadre .box{
+          margin: 10px 0;
+        }
+        
+      }
+
+   
+    
