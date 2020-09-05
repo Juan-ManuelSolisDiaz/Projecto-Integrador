@@ -138,12 +138,14 @@ a{
         text-align: start;
         padding: 5px;
     }
+}
 
 
 
-
-
-
+@media screen and (max-width: 390px){
+    .titulito{
+        display: none;
+    }
 
 }
 
@@ -240,11 +242,9 @@ a{
         background-position:top;
         background-size:initial;
         width: 100%;
-        height: 130vh;
+        height: 70vh;
     }
-    .carusel{
-        height: 68vh;
-    }
+  
     .titulo{
         font-size: 2.0625rem;
     }
@@ -253,6 +253,18 @@ a{
         height: 45vh;
     }
    
+}
+
+
+
+@media screen and (max-width: 390px){
+    .carusel{
+        height: 60vh;
+    }
+    .slider li{
+        height: 40vh;
+    }
+
 }
 
 
@@ -407,12 +419,12 @@ a{
 
 @media screen and (max-width: 500px){
     .padrecontenedor{
-        height: ;
+        height:220vh;
     }
     .contenedor{
         grid-gap: 15px;
         grid-template-columns:repeat(2, 1fr) ; 
-        grid-template-rows:repeat(6, 2fr);
+        grid-template-rows:repeat(6, 1fr);
         grid-template-areas: "caja1 caja1"
                              "caja2 caja2"
                              "caja3 caja3"
@@ -455,6 +467,29 @@ a{
 
 }
 
+
+@media screen and (max-width: 390px){
+    .contenedor{
+        grid-gap: 15px;
+        grid-template-columns:repeat(1, 1fr) ; 
+        grid-template-rows:repeat(6, 1fr);
+        grid-template-areas: "caja1"
+                             "caja2"
+                             "caja3"
+                             "aside"
+                             "aside"
+                             "aside"
+                             "caja4";
+    }
+    .spot{
+        height:70vh ;
+    }
+    .spotifi{
+        height: 70vh;
+    
+    }
+
+}
 
 
 
@@ -643,6 +678,12 @@ a{
           margin: 10px 0;
         }
         
+      }
+
+      @media screen and (max-width: 390px){
+          .pie{
+              height: 170vh;
+          }
       }
 
    
