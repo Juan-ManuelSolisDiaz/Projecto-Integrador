@@ -5,8 +5,9 @@ body{
     background-attachment: fixed;
     background-repeat: none;
     background-size: cover;
-    
-}
+    display: flex;
+    justify-content: center;
+    }
 * {
     box-sizing: border-box;
 }
@@ -15,9 +16,7 @@ body{
     padding: 35px;
 }
 
-
-
-.formulario{
+.formulario{;
     background: #111;
     padding: 3px;
     font-family: 'Alata', sans-serif;
